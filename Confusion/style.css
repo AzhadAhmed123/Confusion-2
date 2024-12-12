@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    cursor: none;
+    /* Hide the default cursor */
+}
+
+/* Cursor Elements */
+.cursor-dot,
+.cursor-circle {
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+/* Dot in the center */
+.cursor-dot {
+    width: 9px;
+    height: 9px;
+    background-color: #e65540;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: transform 0.1s ease;
+    /* Faster transition for dot */
+}
+
+/* Outer Circle with Background Color */
+.cursor-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #e65540;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 999;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+a:hover~.cursor-circle,
+button:hover~.cursor-circle {
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.page-width {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.main-style {
+    padding: 75px 15px;
+}
+
+h2 {
+    font-size: 75px;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    line-height: 90px;
+}
+
+p {
+    font-size: 18px;
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    line-height: 30px;
+}
+
+button {
+    font-size: 17px;
+    font-family: "Poppins";
+    font-weight: 500;
+    background-color: #5846FB;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+}
+
+.bg-color-section {
+    background-color: black;
+    border: none;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.navbr {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 15px;
+}
+
+.logo-text {
+    font-size: 25px;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: #5846FB;
+    width: 25%;
+}
+
+.link-items {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 22px 75px;
+}
+
+a {
+    font-size: 15px;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.hero-section-main-text-items {
+    width: 60%;
+    margin: auto;
+    padding-top: 75px;
+}
+
+.hero-section-main-text-h1 {
+    font-size: 100px;
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: #fff;
+}
+
+.hero-section-main-text-para {
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    width: 45%;
+    margin: auto;
+    padding: 25px 0px;
+}
+
+.hero-section-main-text-btn {
+    padding: 18px 50px;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    display: flex;
+}
+
+.Latest-Ecosystem-news-itmes-text {
+    font-size: 25px;
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    color: #fff;
+}
+
+.Latest-Ecosystem-news-itmes-btn-1 {
+    background-color: #1F2123;
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    padding: 35px 25px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 14px
+}
+
+.btn-icon {
+    width: 19%;
+}
+
+.icon-1,
+.icon-3 {
+    width: 22%;
+}
+
+.icon-2 {
+    width: 15%;
+}
+
+.Latest-Ecosystem-news-itmes-btn-1-text-para {
+    font-size: 16px;
+    font-family: "Space Grotesk";
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
+}
+
+.para-0,
+.para-2,
+.para-3 {
+    width: 70%;
+}
+
+.section-2-text-items {
+    width: 40%;
+}
+
+.section-2-text-items-btn {
+    padding: 15px 30px;
+}
+
+.section-2-btn-images-items {
+    width: 50%;
+}
+
+.section-2-middle-btn {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding: 30px 0px;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.section-2-middle-btn-text-h4 {
+    font-size: 55px;
+    font-family: "Space Grotesk";
+    font-weight: 400;
+}
+
+.section-2-upper-btn {
+    width: 225px;
+    border-radius: 100px;
+    background-color: #F0F0F0;
+    color: black;
+    font-size: 55px;
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    padding: 25px 0px;
+}
+
+.btn-upper-main {
+    display: flex;
+    justify-content: left;
+    gap: 25px;
+    align-items: center;
+}
+
+.btn-upper-main-img {
+    width: 20%;
+}
+
+.btn-below-main {
+    display: flex;
+    justify-content: right;
+    gap: 25px;
+    align-items: center;
+}
+
+.section-2-below-btn {
+    font-size: 23px;
+    padding: 28px 50px;
+    width: 290px;
+    font-family: "Poppins";
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    background-color: #F0F0F0;
+    color: black;
+    border-radius: 100px;
+}
+
+.btn-below-main-img {
+    width: 20%;
+}
+
+.section-3-main-text {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.card-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-1 {
+    background-color: #F0F0F0;
+    width: 400px;
+    padding: 50px 30px;
+    border-radius: 35px;
+}
+
+.card-logo {
+    padding-bottom: 90px;
+}
+
+.card-logo-img {
+    width: 18%;
+}
+
+.card-content {
+    padding-top: 90px;
+    width: 95%;
+}
+
+.card-content-text-para {
+    line-height: 25px;
+}
+
+.card-content-text-h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.card-content-btn {
+    background: none;
+    color: #5846FB;
+    font-size: 16px;
+
+}
+
+.bg-color-section-2 {
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    padding: 75px 75px;
+}
+
+.see-all-features-text {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.section-4 {
+    display: flex;
+    justify-content: center;
+    gap: 254px;
+    align-items: center;
+}
+
+.section-4-img {
+    width: 35%;
+}
+
+.section-4-text-items {
+    width: 45%;
+
+}
+
+.section-4-text-main {
+    font-size: 25px;
+    font-weight: 400;
+    color: #5846FB;
+}
+
+.section-4-text-main-h2 {
+    color: #fff;
+}
+
+.section-4-text-main-para {
+    color: #fff;
+}
+
+.Latest-Ecosystem-news-itmes-text-h2 {
+    color: #fff;
+    width: 40%;
+}
+
+.sub-para-0 {
+    font-size: 22px;
+    font-family: "Space Grotesk";
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+}
+
+.sub-btn-1 {
+    gap: 30px;
+}
+
+.sub-icon-2 {
+    width: 22%;
+}
+
+.sub-icon-1 {
+    width: 19%;
+}
+
+.section-4-text-h4 {
+    font-size: 30px;
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    color: black;
+}
+
+.section-4-text-sub-btn {
+    background: none;
+    color: #bbbbbb;
+    font-family: "Space Grotesk";
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.section-5-img {
+    width: 37%;
+}
+
+.section-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-color-section-3 {
+    background-color: black;
+    padding: 0px 50px;
+    padding-top: 75px;
+    padding-bottom: 25px;
+    border: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.section-6 {
+    padding-top: 75px;
+}
+
+.section-6-main-text {
+    color: #fff;
+    font-size: 100px;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+
+.btn-items-row-1-btn-1 {
+    padding: 15px 40px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Space Grotesk";
+    font-weight: 300;
+    border: 1px solid #8A8A8A;
+
+}
+
+.section-6-btn-items-row-1 {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.row-2 {
+    padding-bottom: 150px;
+}
+
+.terms-condition-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.terms-condition-items-text {
+    font-size: 30px;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: #5846FB;
+}
+
+.terms-condition-items-text-para {
+    color: #fff;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+@media only screen and (max-width:600px) {
+
+    .hero-section-sub-btns,
+    .terms-condition-items {
+        flex-direction: column;
+    }
+
+    .Latest-Ecosystem-news-itmes-btn-1,
+    .hero-section-main-text-items,
+    .card-content {
+        width: 100%;
+    }
+
+    .section-4-text-items,
+    .Latest-Ecosystem-news-itmes-text-h2,
+    .card-content,
+    .section-3-main-text,
+    .Latest-Ecosystem-news-itmes-text,
+    .section-4-text-h4 {
+        text-align: center;
+    }
+
+    h2,
+    p {
+        text-align: center;
+    }
+
+    .res-600 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hero-section-btns {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .link-items {
+        display: none;
+    }
+
+    .navbr {
+        justify-content: center;
+    }
+
+    .section-2 {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .section-2-middle-btn {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .section-2-middle-btn-text-h4 {
+        font-size: 35px;
+    }
+
+    .card-items,
+    .section-5 {
+        flex-direction: column;
+    }
+
+    .section-3-main-text {
+        text-align: left;
+        width: 100%;
+    }
+
+    .section-4-text-items,
+    .Latest-Ecosystem-news-itmes-text-h2,
+    .section-2-text-items {
+        width: 100%;
+    }
+
+    .section-4,
+    .section-5 {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .section-4-img,
+    .section-2-btn-images-items,
+    .card-1,
+    .section-5-img {
+        width: 100%;
+    }
+
+    .see-all-features-text-link {
+        font-size: 30px;
+    }
+
+    .logo-text {
+        font-size: 45px;
+    }
+
+    .section-5 {
+        gap: 50px;
+    }
+
+    .section-6-btn-items-row-1 {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:441px) {
+
+    .hero-section-main-text-h1,
+    .res-441-1 {
+        font-size: 65px;
+    }
+
+    .section-3-main-text,
+    .section-6-main-text {
+        font-size: 60px;
+    }
+
+    .Latest-Ecosystem-news-itmes-text-h2 {
+        font-size: 62px;
+    }
+
+    .section-4-text-main-h2 {
+        font-size: 39px;
+    }
+}
+
+@media only screen and (max-width:1142px) {
+    .link-items {
+        /* display: none; */
+    }
+}
